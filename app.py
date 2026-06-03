@@ -30,10 +30,10 @@ if menu == "Student Module":
         prediction = model.predict(
             [[cgpa, aptitude, internship]]
         )
-    if prediction[0] == 1:
-        st.success("Placement Ready")
-    else:
-        st.warning("Needs Improvement")
+        if prediction[0] == 1:
+            st.success("Placement Ready")
+        else:
+            st.warning("Needs Improvement")
     #Career  Recommendation
     if cgpa < 7:
         st.warning("Recommendation: Improve your CGPA.")
