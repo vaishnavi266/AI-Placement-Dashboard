@@ -26,8 +26,20 @@ if menu == "Student Module":
 
     internship = st.selectbox(
         "Internship Completed?",
-        [0, 1]
+        [     "0 (Fresher)",
+              "1–2 Internships",
+              "3–5 Internships",
+              "6–8 Internships",
+              "9+ Internships"
+        ]
     )
+    if internship == "9+":
+         internship_value = 9
+    else:
+         internship_value = int(internship)
+
+# Now you can use internship_value below
+st.write("Internship value used:", internship_value)
     #Prediction
     if st.button("Predict Placement"):
 
