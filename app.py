@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 import numpy as np
+import matplotlib.pyplot as plt
 
 # Load model
 model = pickle.load(open("model/model.pkl", "rb"))
@@ -30,8 +31,6 @@ if st.button("Predict Placement"):
         st.success("High Chance of Placement")
     else:
         st.error("Low Chance of Placement")
-
- import matplotlib.pyplot as plt
 
 chart_data = [cgpa, aptitude]
 
