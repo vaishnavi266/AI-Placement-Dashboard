@@ -31,14 +31,14 @@ if menu == "Student Module":
     if st.button("Predict"):
         st.write("Internship value used:", internship_value)
    
-    #Prediction
+    prediction = None
     if st.button("Predict Placement"):
-        prediction = model.predict([[cgpa, aptitude, internship]])
+        prediction = model.predict([[internship_value]])
 
-    if prediction[0] == 1:
-        st.success("Placement Ready")
-    else:
-        st.warning("Needs Improvement")
+     if prediction[0] == 1:
+        st.success("🎉 Student is Likely Placed")
+     else:
+         st.error("❌ Student may not be placed")
     #Career  Recommendation
     if cgpa < 7:
         st.warning("Recommendation: Improve your CGPA.")
