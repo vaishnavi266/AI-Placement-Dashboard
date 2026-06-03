@@ -35,7 +35,7 @@ if menu == "Student Module":
     if st.button("Predict Placement"):
         prediction = model.predict([[internship_value]])
 
-    if prediction[0] == 1:
+    if prediction == 1:
         st.success("🎉 Student is Likely Placed")
     else:
         st.error("❌ Student may not be placed")
