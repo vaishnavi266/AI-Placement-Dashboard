@@ -39,15 +39,14 @@ if menu == "Student Module":
          internship_value = int(internship)
 
 # Now you can use internship_value below
-st.write("Internship value used:", internship_value)
+    st.write("Internship value used:", internship_value)
     #Prediction
-    if st.button("Predict Placement"):
-
-        prediction = model.predict(
+     if st.button("Predict Placement"):
+          prediction = model.predict(
             [[cgpa, aptitude, internship]]
         )
 
-        if prediction[0] == 1:
+if prediction[0] == 1:
             st.success("Placement Ready")
         else:
             st.warning("Needs Improvement")
