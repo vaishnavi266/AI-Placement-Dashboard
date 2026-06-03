@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load model
-model = pickle.load(open("model/model.pkl", "rb"))
+model = pickle.load(open("Model/model.pkl", "rb"))
 
 # Title
 st.title("AI Placement Prediction Dashboard")
