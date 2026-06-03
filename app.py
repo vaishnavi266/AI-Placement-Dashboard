@@ -28,8 +28,8 @@ if menu == "Student Module":
 
     internship_value = int(internship)
 
-     if st.button("Predict"):
-         st.write("Internship value used:", internship_value)
+    if st.button("Predict"):
+        st.write("Internship value used:", internship_value)
    
     #Prediction
     if st.button("Predict Placement"):
