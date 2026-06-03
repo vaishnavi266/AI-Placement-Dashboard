@@ -33,10 +33,6 @@ if menu == "Student Module":
               "9+ Internships"
         ]
     )
-    if internship == "9+":
-         internship_value = 9
-    else:
-         internship_value = int(internship)
 
 # Now you can use internship_value below
     st.write("Internship value used:", internship_value)
