@@ -24,21 +24,16 @@ if menu == "Student Module":
 
     aptitude = st.slider("Enter Aptitude Score", 0, 100, 60)
 
-    internship = st.selectbox("Internship Completed?",["0","1","2","3","4","5","6"])
-
-    internship_value = int(internship)
-
-    if st.button("Predict"):
-        st.write("Internship value used:", internship_value)
-   
-    prediction = None
+    internship = st.selectbox("Internship Completed?",[0,1])
+    #Prediction
     if st.button("Predict Placement"):
-        prediction = model.predict([[internship_value]])
-
-    if prediction == 1:
-        st.success("🎉 Student is Likely Placed")
+        prediction = model.predict(
+            [[cgpa, aptitude, internship]]
+        )
+    if prediction[0] == 1:
+        st.success("Placement Ready")
     else:
-        st.error("❌ Student may not be placed")
+        st.warning("Needs Improvement")
     #Career  Recommendation
     if cgpa < 7:
         st.warning("Recommendation: Improve your CGPA.")
