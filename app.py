@@ -24,11 +24,9 @@ if menu == "Student Module":
 
     aptitude = st.slider("Enter Aptitude Score", 0, 100, 60)
 
-    internship = st.selectbox(
-    "Internship Completed?",
-    ["0","1","2","3","4","5","6"])
+    internship = st.selectbox("Internship Completed?",["0","1","2","3","4","5","6"])
 
-     internship_value = int(internship)
+    internship_value = int(internship)
 
      if st.button("Predict"):
          st.write("Internship value used:", internship_value)
